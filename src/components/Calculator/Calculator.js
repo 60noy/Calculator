@@ -5,15 +5,24 @@ export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      status: '',
-      answer: '',
+      mode: '',
+      current: '',
       exercise: ''
     }
   }
   // handles click on number button
   handleNumerialButtonClick = (num) =>{
     let exercise = this.state.exercise;
-    this.setState({exercise: exercise + num})
+    let current = this.state.current;
+    exercise += num;
+    if (this.state.mode == 'number') {
+      current += num;
+    }
+    else {
+      current = num;
+    }
+
+    this.setState({exercise,current,mode: 'number'})
 
     // this.setState((prevState) => {answer: prevState.answer += num + ''})
     console.log(`number  ${num} clicked`);
@@ -21,26 +30,38 @@ export default class Calculator extends React.Component {
   // handles click on expression button
   handleSignButtonClick = (sign) =>{
     console.log(`sign  ${sign} clicked`);
-    let exercise = this.state.exercise;
-    this.setState({exercise: exercise + sign})
+    let {exercise,mode,current} = this.state;
+    if (mode == 'expression') {
+      exercise = exercise.substring(0,exercise.length-1) + sign
+      console.log('exercise exp',exercise);
+    }
+    else{
+      exercise += sign
+      mode = 'expression'
+    }
+    current = sign
+    this.setState({exercise,mode,current})
 
 
   }
   // handles click on calculate button
   handleCalculateButtonClick = () =>{
-    let exercise = this.state.exercise;
-        this.setState({answer: eval(exercise)})
+    let {exercise,mode,current} = this.state
+    let answer = eval(exercise)
+    current = answer
+    exercise = answer
+        this.setState({current,answer,exercise})
   }
   // handles click on AC button
   handleCleanButton =() =>{
-    this.setState({status: '', answer: '', exercise: ''})
+    this.setState({status: '', current: '', exercise: ''})
   }
 
   render() {
     return (
       <div>
         <Display
-          answer={this.state.answer}
+          answer={this.state.current ? this.state.current + '' : '0'}
           exercise={this.state.exercise}
         />
         <ButtonsContainer
