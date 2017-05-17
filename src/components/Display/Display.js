@@ -4,12 +4,16 @@ import styles from './Display.css';
  const Display = (props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.exercise}>
-      {props.exercise} 1
+      <div className={styles.text}>
+        <div className={styles.exercise}>
+        {props.exercise} 1
+      </div>
+      <div className={styles.current}>
+        {props.answer} 23
+      </div>
+      <div className={styles.icon}>
     </div>
-    <div className={styles.current}>
-      {props.answer} 23
-    </div>
+      </div>
     </div>
 );
 }

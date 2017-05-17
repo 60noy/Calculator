@@ -60,7 +60,7 @@ export default class Calculator extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <Display
           answer={this.state.current ? this.state.current + '' : '0'}
           exercise={this.state.exercise}

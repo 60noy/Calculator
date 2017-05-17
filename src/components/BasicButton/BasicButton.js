@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import globalStyles from '../../globalStyles.css';
 import styles from './BasicButton.css';
 
 const BasicButton = (props) => {
@@ -21,18 +20,15 @@ const BasicButton = (props) => {
     className = styles.normal
   }
   return (
-
     <button className={className}
       onClick={props.onClick}
     >
       {props.label}
     </button>
-
 );
 }
 
 export default BasicButton;
-
 BasicButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,

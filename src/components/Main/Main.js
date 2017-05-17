@@ -5,6 +5,9 @@ export default class Main extends React.Component {
   render() {
     return (
       <div className={styles.container}>
+        <div className={styles.title}>
+          JavaScript Calculator
+        </div>
         <Calculator />
     </div>
   );

@@ -7,14 +7,22 @@
 }
 
 .container{
-  background-color: #E0E0E0;
-  text-align: center;
+  background-color: #444444;
   font-family: 'Digital', sans-serif;
+  text-align: right;
+  color: #fff;
+}
+.default-margins{
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 .exercise{
+  composes: default-margins;
   font-size: 1.5em;
   font-style: italic;
 }
 .current{
+  composes: default-margins;
   font-size: 3em;
 }

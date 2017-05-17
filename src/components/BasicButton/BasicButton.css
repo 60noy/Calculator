@@ -4,26 +4,28 @@
   border: none;
   padding:20px;
   margin: 1;
-  width: 4em;
-  color:#fff;
+  width: 25%;
+  color:#000;
   outline: none;
   cursor: pointer !important;
+  transition: .5s;
 }
 /*numberial button styles*/
 .numerial{
   composes: normal;
-  background-color: #E91E63;
+  background-color: #FFFFF7;
 }
 .numerial:hover{
-  background-color: #EC407A;
+  background-color: #d1e1f6;
 }
 /* expression button styles*/
 .expression{
   composes: normal;
-  background-color: #1A237E;
+  background-color: #73B1D6;
+  color: #fff;
 }
 .expression:hover{
-  background-color: #3949AB;
+  background-color: #4589B0;
 }
 .clear{
   composes: normal;
@@ -35,9 +37,10 @@
 }
 .calculate{
   composes: normal;
-  background-color: #C62828;
+  background-color: #1D628B;
+  color: #fff;
   /*height: 8em;*/
 }
 .calculate:hover{
-  background-color: #B71C1C;
+  background-color: #035586;
 }

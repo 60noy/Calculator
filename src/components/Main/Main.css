@@ -1,3 +1,16 @@
+@font-face {
+font-family:'Roboto-Light';
+src: url('../../../public/fonts/Roboto-Light.ttf');
+font-weight: 200;
+font-style: normal;
+}
 .container{
+  margin: 3%;
+  padding: 0;
+}
+.title{
+  font-size: 4em;
+  font-family: 'Roboto-Light', sans-serif;
   text-align: center;
+  margin-bottom: 3%;
 }
