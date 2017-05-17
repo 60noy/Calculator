@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonsContainer from '../ButtonsContainer/ButtonsContainer';
 import Display from '../Display/Display';
+import styles from './Calculator.css';
 export default class Calculator extends React.Component {
   constructor(props) {
     super(props);

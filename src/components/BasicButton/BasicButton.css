@@ -1,0 +1,43 @@
+/* normal styles for default button*/
+.normal{
+  font-size: 16px;
+  border: none;
+  padding:20px;
+  margin: 1;
+  width: 4em;
+  color:#fff;
+  outline: none;
+  cursor: pointer !important;
+}
+/*numberial button styles*/
+.numerial{
+  composes: normal;
+  background-color: #E91E63;
+}
+.numerial:hover{
+  background-color: #EC407A;
+}
+/* expression button styles*/
+.expression{
+  composes: normal;
+  background-color: #1A237E;
+}
+.expression:hover{
+  background-color: #3949AB;
+}
+.clear{
+  composes: normal;
+  background-color: #F44336;
+  font-weight: bold;
+}
+.clear:hover{
+  background-color: #F46336;
+}
+.calculate{
+  composes: normal;
+  background-color: #C62828;
+  /*height: 8em;*/
+}
+.calculate:hover{
+  background-color: #B71C1C;
+}

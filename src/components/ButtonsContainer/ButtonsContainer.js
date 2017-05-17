@@ -6,29 +6,36 @@ const ButtonsContainer = (props) => {
   return (
     <div>
       <div>
-    <BasicButton label="1"  onClick={() => props.onNumerialButtonClick(1)} />
-    <BasicButton label="2"  onClick={() => props.onNumerialButtonClick(2)} />
-    <BasicButton label="3"  onClick={() => props.onNumerialButtonClick(3)} />
+        <BasicButton label="AC" type='clear' onClick={() => props.onCleanButton()} />
+        <BasicButton label="CE" type='clear' onClick={() => props.onCleanButton()} />
+        <BasicButton label="*" type='expression'  onClick={() => props.onSignButtonClick('*')} />
+        <BasicButton label="/" type='expression'  onClick={() => props.onSignButtonClick('/')} />
       </div>
       <div>
-    <BasicButton label="4"  onClick={() => props.onNumerialButtonClick(4)} />
-    <BasicButton label="5"  onClick={() => props.onNumerialButtonClick(5)} />
-    <BasicButton label="6"  onClick={() => props.onNumerialButtonClick(6)} />
+    <BasicButton label="1" type='numerial'  onClick={() => props.onNumerialButtonClick(1)} />
+    <BasicButton label="2" type='numerial'  onClick={() => props.onNumerialButtonClick(2)} />
+    <BasicButton label="3" type='numerial'  onClick={() => props.onNumerialButtonClick(3)} />
+    <BasicButton label="+" type='expression'  onClick={() => props.onSignButtonClick('+')} />
+      </div>
+      <div>
+    <BasicButton label="4" type='numerial' onClick={() => props.onNumerialButtonClick(4)} />
+    <BasicButton label="5" type='numerial' onClick={() => props.onNumerialButtonClick(5)} />
+    <BasicButton label="6" type='numerial' onClick={() => props.onNumerialButtonClick(6)} />
+    <BasicButton label="-" type='expression' onClick={() => props.onSignButtonClick('-')} />
   </div>
   <div>
-    <BasicButton label="7"  onClick={() => props.onNumerialButtonClick(7)} />
-    <BasicButton label="8"  onClick={() => props.onNumerialButtonClick(8)} />
-    <BasicButton label="9"  onClick={() => props.onNumerialButtonClick(9)} />
+    <BasicButton label="7" type='numerial' onClick={() => props.onNumerialButtonClick(7)} />
+    <BasicButton label="8" type='numerial' onClick={() => props.onNumerialButtonClick(8)} />
+    <BasicButton label="9" type='numerial' onClick={() => props.onNumerialButtonClick(9)} />
+    <BasicButton label="=" type='calculate'  onClick={() => props.onCalculateButtonClick()} />
+
   </div>
   <div>
-    <BasicButton label="-"  onClick={() => props.onSignButtonClick('-')} />
-    <BasicButton label="+"  onClick={() => props.onSignButtonClick('+')} />
-    <BasicButton label="*"  onClick={() => props.onSignButtonClick('*')} />
-    <BasicButton label="/"  onClick={() => props.onSignButtonClick('/')} />
-    <BasicButton label="="  onClick={() => props.onCalculateButtonClick()} />
-    <BasicButton label="AC"  onClick={() => props.onCleanButton()} />
+
   </div>
-  <BasicButton label="0"  onClick={() => props.onNumerialButtonClick(0)} />
+  <div>
+  <BasicButton label="0" type='numerial' onClick={() => props.onNumerialButtonClick(0)} />
+</div>
   </div>
 );
 
