@@ -11,11 +11,20 @@
   font-family: 'Digital', sans-serif;
   text-align: right;
   color: #fff;
+  height: 10vh;
+
+  /*display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;*/
 }
 .default-margins{
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+.text{
+  /*display: flex;
+  flex-direction: column;*/
 }
 .exercise{
   composes: default-margins;
@@ -25,4 +34,14 @@
 .current{
   composes: default-margins;
   font-size: 3em;
+
+}
+.icon{
+  text-align: left;
+  border-radius: 50%;
+  float: left;
+  border: 1px solid red;
+  align-self: center;
+  box-sizing: border-box; /* <- added this */
+
 }

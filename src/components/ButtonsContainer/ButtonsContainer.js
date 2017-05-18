@@ -6,7 +6,6 @@ const ButtonsContainer = (props) => {
   return (
     <div>
       <div>
-        {/* <BasicButton label="AC" type='clear' onClick={() => props.onCleanButton()} /> */}
       </div>
       <div>
     <BasicButton label="1" type='numerial'  onClick={() => props.onNumerialButtonClick(1)} />

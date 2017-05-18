@@ -63,13 +63,13 @@ export default class Calculator extends React.Component {
       <div className={styles.container}>
         <Display
           answer={this.state.current ? this.state.current + '' : '0'}
-          exercise={this.state.exercise}
+          exercise={this.state.exercise ? this.state.exercise + '' : '0'}
+          onCleanButton={this.handleCleanButton}
         />
         <ButtonsContainer
           onNumerialButtonClick={this.handleNumerialButtonClick}
           onSignButtonClick={this.handleSignButtonClick}
           onCalculateButtonClick={this.handleCalculateButtonClick}
-          onCleanButton={this.handleCleanButton}
          />
       </div>
     );
