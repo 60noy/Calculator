@@ -14,10 +14,7 @@ import deleteIcon from '../../../public/images/ic_clear.svg';
         {props.answer}
       </div>
       </div>
-      {/* <div className={styles.icon} > */}
-      <img src={deleteIcon} className={styles.icon} onClick={() => props.onCleanButton()}/>
-    {/* </div> */}
-
+      <img src={deleteIcon} className={props.exercise !== 0 ? styles.icon : styles.icon-hidden} onClick={() => props.onCleanButton()}/>
     </div>
 );
 }
