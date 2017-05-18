@@ -6,21 +6,25 @@ export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      mode: '',
-      current: '',
-      exercise: ''
+      mode: 'calculate',
+      current: '0',
+      exercise: '0'
     }
   }
   // handles click on number button
   handleNumerialButtonClick = (num) =>{
-    let exercise = this.state.exercise;
-    let current = this.state.current;
-    exercise += num;
+    let {exercise,current,mode} = this.state;
     if (this.state.mode == 'number') {
-      current += num;
+      current += num + '';
+      exercise += num + '';
     }
-    else {
+    else if(mode == 'expression'){
+      exercise += num;
       current = num;
+    }
+    else if(mode == 'calculate'){
+      current = num;
+      exercise = num;
     }
 
     this.setState({exercise,current,mode: 'number'})
@@ -32,14 +36,17 @@ export default class Calculator extends React.Component {
   handleSignButtonClick = (sign) =>{
     console.log(`sign  ${sign} clicked`);
     let {exercise,mode,current} = this.state;
+    // changes the expression if the is already one
     if (mode == 'expression') {
       exercise = exercise.substring(0,exercise.length-1) + sign
       console.log('exercise exp',exercise);
     }
+    // adds the expression to the end
     else{
       exercise += sign
       mode = 'expression'
     }
+    // sets the current sign
     current = sign
     this.setState({exercise,mode,current})
 
@@ -51,19 +58,19 @@ export default class Calculator extends React.Component {
     let answer = eval(exercise)
     current = answer
     exercise = answer
-        this.setState({current,answer,exercise})
+        this.setState({current,answer,exercise,mode: 'calculate'})
   }
   // handles click on AC button
   handleCleanButton =() =>{
-    this.setState({status: '', current: '', exercise: ''})
+    this.setState({current: '0', exercise: '0',mode:'calculate'})
   }
 
   render() {
     return (
       <div className={styles.container}>
         <Display
-          answer={this.state.current ? this.state.current + '' : '0'}
-          exercise={this.state.exercise ? this.state.exercise + '' : '0'}
+          answer={this.state.current + ''}
+          exercise={this.state.exercise + ''}
           onCleanButton={this.handleCleanButton}
         />
         <ButtonsContainer
