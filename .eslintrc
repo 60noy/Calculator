@@ -1,5 +1,6 @@
 {
 
+  "extends":"airbnb",
   "parserOptions": {
         "ecmaVersion": 7,
         "sourceType": "module",
@@ -30,7 +31,7 @@
   },
 
   "env": {
-    "browser": false,
+    "browser": true,
     "node": false,
     "amd": false,
     "mocha": false,
@@ -41,5 +42,28 @@
     "shelljs": false,
   },
   "rules": {
-    }
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/forbid-prop-types": [0, { "forbid": ['array'] }],
+      "no-unused-vars": ["error", { "args": "all" }],
+      "no-eval": [0, {"allowIndirect": true}] ,
+      "linebreak-style": 0,
+      "brace-style": [1, "stroustrup", { "allowSingleLine": true }],
+      'jsx-a11y/no-noninteractive-element-interactions': [
+  'error',
+  {
+    handlers: [
+      'onMouseDown',
+      'onMouseUp',
+      'onKeyPress',
+      'onKeyDown',
+      'onKeyUp',
+    ],
+  },
+],
+
+
+    },
+    "globals": {
+      "document" :false
+      }
 }

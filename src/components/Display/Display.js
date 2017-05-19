@@ -1,25 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Display.css';
-import BasicButton from '../BasicButton/BasicButton';
 import deleteIcon from '../../../public/images/ic_clear.svg';
- const Display = (props) => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.text}>
-        <div className={styles.exercise}>
-        {props.exercise}
+
+const Display = ({ exercise, answer, onCleanButton }) => (
+  <div className={styles.container}>
+    <div className={styles.text}>
+      <div className={styles.exercise}>
+        {exercise}
       </div>
       <div className={styles.current}>
-        {props.answer}
+        {answer}
       </div>
-      </div>
-      <img src={deleteIcon} className={props.exercise !== 0 ? styles.icon : styles.icon-hidden} onClick={() => props.onCleanButton()}/>
     </div>
+    <img
+      src={deleteIcon}
+      className={exercise !== 0 ? styles.icon : styles.iconHidden}
+      alt="delete icon"
+      onClick={() => onCleanButton()}
+    />
+  </div>
 );
-}
 
 export default Display;
+
 Display.propTypes = {
   answer: PropTypes.string.isRequired,
+  onCleanButton: PropTypes.func.isRequired,
+  exercise: PropTypes.string.isRequired,
 };

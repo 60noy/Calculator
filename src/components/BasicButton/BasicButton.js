@@ -2,34 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BasicButton.css';
 
-const BasicButton = (props) => {
+const BasicButton = ({ type, onClick, label }) =>
+{
   let className;
-  if (props.type == 'numerial') {
-    className = styles.numerial
+  if (type === 'numerial')
+{
+    className = styles.numerial;
   }
-  else if(props.type == 'expression'){
-    className = styles.expression
+  else if (type === 'expression')
+{
+    className = styles.expression;
   }
-  else if(props.type == 'clear'){
-    className = styles.clear
+  else if (type === 'clear')
+{
+    className = styles.clear;
   }
-  else if(props.type == 'calculate'){
-    className = styles.calculate
+  else if (type === 'calculate')
+{
+    className = styles.calculate;
   }
-  else {
-    className = styles.normal
+  else
+{
+    className = styles.normal;
   }
   return (
-    <button className={className}
-      onClick={props.onClick}
+    <button
+      className={className}
+      onClick={onClick}
     >
-      {props.label}
+      {label}
     </button>
-);
-}
+  );
+};
 
 export default BasicButton;
 BasicButton.propTypes = {
   label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
