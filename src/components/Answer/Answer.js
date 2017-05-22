@@ -8,7 +8,7 @@ const Answer = ({ exercise, onAnswerDelete, answer }) => (
     <div className={styles.fullExercise}>
       {exercise} =
       <span className={styles.answer}>
-        {answer}
+        {` ${answer}`}
       </span>
 
     </div>

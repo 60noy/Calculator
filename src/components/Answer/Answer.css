@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: 4%;
-  flex-wrap: nowrap;
   flex-direction: row;
 }
 .fullExercise{

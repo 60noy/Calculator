@@ -13,12 +13,13 @@ const Display = ({ exercise, answer, onCleanButton }) => (
         {answer}
       </div>
     </div>
-    <img
+    { exercise !== '0' &&
+    (<img
       src={deleteIcon}
       className={exercise !== 0 ? styles.icon : styles.iconHidden}
       alt="delete icon"
       onClick={() => onCleanButton()}
-    />
+    />)}
   </div>
 );
 
