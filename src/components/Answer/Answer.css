@@ -3,7 +3,7 @@
   justify-content: center;
   margin-bottom: 4%;
   flex-wrap: nowrap;
-  padding-right: 10%;
+  flex-direction: row;
 }
 .fullExercise{
   font-size: 1.2vw;
@@ -21,4 +21,8 @@
 .deleteImg{
   width: 24px;
   align-self: flex-end;
+}
+.answer{
+  color: #1D628B;
+  font-weight: bold;
 }

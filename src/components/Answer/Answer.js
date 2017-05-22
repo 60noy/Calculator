@@ -6,8 +6,7 @@ import icDelete from '../../../public/images/ic_delete_red.png';
 const Answer = ({ exercise, onAnswerDelete, answer }) => (
   <div className={styles.container}>
     <div className={styles.fullExercise}>
-      {exercise}
-      =
+      {exercise} =
       <span className={styles.answer}>
         {answer}
       </span>
