@@ -15,6 +15,12 @@ export default class Main extends React.Component {
     calculations.push(calculation);
     this.setState({ calculations });
   }
+  // deletes the answer on bin icon click
+  handleAnswerDelete = (answerObjID) => {
+    let calculations = this.state.calculations;
+    calculations = calculations.filter(answer => answer.id !== answerObjID);
+    this.setState({ calculations });
+  }
   render() {
     return (
       <div className={styles.container}>
@@ -27,6 +33,7 @@ export default class Main extends React.Component {
         <div className={styles.answers}>
           <AnswersListContainer
             data={this.state.calculations}
+            onAnswerDelete={this.handleAnswerDelete}
           />
         </div>
       </div>
