@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4%;
+  flex-wrap: nowrap;
+  padding-right: 10%;
+}
+.fullExercise{
+  font-size: 1.2vw;
+  font-family: 'Roboto-Light';
+}
+.btnDelete{
+  outline: none;
+  cursor: pointer !important;
+  transition: .5s;
+  border: none;
+}
+.btnDelete:hover{
+  background-image: url'(../../../public/images/ic_delete_dark.png') no-repeat;
+}
+.deleteImg{
+  width: 24px;
+  align-self: flex-end;
+}

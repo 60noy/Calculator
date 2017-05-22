@@ -44,3 +44,9 @@
 .calculate:hover{
   background-color: #035586;
 }
+
+@media (max-width: 1200px) {
+  .normal{
+    font-size: 1.5vw;
+  }
+}

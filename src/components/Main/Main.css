@@ -4,6 +4,14 @@ src: url('../../../public/fonts/Roboto-Light.ttf');
 font-weight: 200;
 font-style: normal;
 }
+
+@font-face {
+font-family:'Roboto-Medium';
+src: url('../../../public/fonts/Roboto-Medium.ttf');
+font-weight: 200;
+font-style: normal;
+}
+
 .container{
   margin: 3%;
   padding: 0;
@@ -15,4 +23,9 @@ font-style: normal;
   font-size: 4vw;
   font-family: 'Roboto-Light', sans-serif;
   text-align: center;
+}
+.answers{
+  padding-top: 5%;
+  margin-right: 40%;
+  margin-left: 40%;
 }

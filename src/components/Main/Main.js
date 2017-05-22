@@ -10,9 +10,9 @@ export default class Main extends React.Component {
       calculations: [],
     };
   }
-  handleCalculationAdded = (exercise) => {
+  handleCalculationAdded = (calculation) => {
     const calculations = this.state.calculations;
-    calculations.push(`${exercise}`);
+    calculations.push(calculation);
     this.setState({ calculations });
   }
   render() {
@@ -24,9 +24,11 @@ export default class Main extends React.Component {
         <Calculator
           onNewCalculation={this.handleCalculationAdded}
         />
-        <AnswersListContainer
-          data={this.state.calculations}
-        />
+        <div className={styles.answers}>
+          <AnswersListContainer
+            data={this.state.calculations}
+          />
+        </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import ButtonsContainer from '../ButtonsContainer/ButtonsContainer';
 import Display from '../Display/Display';
 import styles from './Calculator.css';
@@ -17,18 +18,18 @@ export default class Calculator extends React.Component {
   handleNumerialButtonClick = (num) => {
     let { exercise, current } = this.state;
     const { mode } = this.state;
-    if (exercise.length !== 10) {
-      if (this.state.mode === 'number') {
+    if (current.length !== 6 && (num !== 0 || exercise !== '0')) {
+      if (this.state.mode === 'number' && (num !== exercise !== 0)) {
         current += `${num}`;
         exercise += `${num}`;
       }
       else if (mode === 'expression') {
-        exercise += num;
-        current = num;
+        exercise += `${num}`;
+        current = `${num}`;
       }
       else if (mode === 'calculate') {
-        current = num;
-        exercise = num;
+        current = `${num}`;
+        exercise = `${num}`;
       }
       this.setState({ exercise, current, mode: 'number' });
     }
@@ -51,10 +52,13 @@ export default class Calculator extends React.Component {
   }
   // handles click on calculate button
   handleCalculateButtonClick = () => {
+    const { mode } = this.state;
     let { exercise, current } = this.state;
-    const answer = eval(exercise);
-    const fullExercise = `${exercise} = ${answer}`;
-    this.props.onNewCalculation(fullExercise);
+    const answer = `${eval(exercise)}`.substring(0, 6);
+    // const fullExercise = `${exercise.split('').join(' ')} = ${answer}`;
+    const answerObject = { exercise, answer, id: shortid.generate() };
+    if (exercise.length >= 3 && mode !== 'calculate') { this.props.onNewCalculation(answerObject); }
+
     current = answer;
     exercise = answer;
     this.setState({ current, answer, exercise, mode: 'calculate' });

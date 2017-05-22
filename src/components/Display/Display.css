@@ -45,3 +45,19 @@
   composes: icon;
   display: none;
 }
+@media (max-width: 800px) {
+  .current{
+    font-size: 4vw;
+  }
+  .exercise{
+    font-size: 2.8vw;
+  }
+}
+@media (min-width: 801px ,max-width:1200px) {
+  .current{
+    font-size: 6vw;
+  }
+  .exercise{
+    font-size: 4vw;
+  }
+}

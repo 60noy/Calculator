@@ -9,9 +9,11 @@ export default class AnswersListContainer extends React.Component {
       data: this.props.data,
     };
   }
-  handleAnswerDelete = (id) => {
-    const data = this.state.data;
-    data.splice(id, 1);
+
+  // deletes the answer on bin icon click
+  handleAnswerDelete = (answerObjID) => {
+    let data = this.state.data;
+    data = data.filter(answer => answer.id !== answerObjID);
     this.setState({ data });
   }
   render() {
