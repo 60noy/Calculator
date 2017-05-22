@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "install": "^0.10.1",
     "npm": "^4.5.0",
     "prop-types": "^15.5.10",
@@ -55,7 +56,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "yarn run build&&gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -88,5 +90,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "homepage": "http://60noy.github.io/Calculator"
 }

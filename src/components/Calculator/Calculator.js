@@ -39,7 +39,7 @@ export default class Calculator extends React.Component {
     let { exercise, mode, current } = this.state;
     // changes the expression if the is already one
     if (mode === 'expression') {
-      exercise = `${exercise.substring(0, exercise.length - 1) + sign}`;
+      exercise = `${exercise.substring(0, exercise.length - 2) + sign} `;
     }
     // adds the expression to the end
     else {
@@ -57,8 +57,9 @@ export default class Calculator extends React.Component {
     const answer = `${eval(exercise)}`.substring(0, 6);
     // const fullExercise = `${exercise.split('').join(' ')} = ${answer}`;
     const answerObject = { exercise, answer, id: shortid.generate() };
-    if (exercise.length >= 3 && mode !== 'calculate' && exercise !== current) { this.props.onNewCalculation(answerObject); }
-
+    if (exercise.length >= 3 && mode !== 'calculate' && exercise !== current) {
+      this.props.onNewCalculation(answerObject);
+    }
     current = answer;
     exercise = answer;
     this.setState({ current, answer, exercise, mode: 'calculate' });
