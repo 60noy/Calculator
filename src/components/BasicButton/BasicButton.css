@@ -10,6 +10,12 @@
   cursor: pointer !important;
   transition: .5s;
 }
+@media (max-width: 1200px) {
+  .normal{
+    font-size: 1.5vw;
+  }
+}
+
 /*numberial button styles*/
 .numerial{
   composes: normal;
@@ -43,10 +49,4 @@
 }
 .calculate:hover{
   background-color: #035586;
-}
-
-@media (max-width: 1200px) {
-  .normal{
-    font-size: 1.5vw;
-  }
 }

@@ -4,6 +4,7 @@
   margin-bottom: 4%;
   flex-direction: row;
 }
+
 .fullExercise{
   font-size: 1.2vw;
   font-family: 'Roboto-Light';
@@ -17,11 +18,23 @@
 .btnDelete:hover{
   background-image: url'(../../../public/images/ic_delete_dark.png') no-repeat;
 }
-.deleteImg{
+.btnDelete{
   width: 24px;
-  align-self: flex-end;
+  height: 24px;
 }
 .answer{
   color: #1D628B;
   font-weight: bold;
+}
+@media (max-width: 1600px) {
+  .btnDelete{
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width:1000px) {
+  .btnDelete{
+    width: 8px;
+    height: 8px;
+  }
 }

@@ -18,3 +18,8 @@
   width: 40%;
 }
 }
+@media (max-width:432px) {
+  .container{
+    width: 60%;
+  }
+}

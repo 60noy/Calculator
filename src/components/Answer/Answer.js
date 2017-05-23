@@ -17,8 +17,6 @@ const Answer = ({ exercise, onAnswerDelete, answer }) => (
       alt="delete exercise"
       className={styles.btnDelete}
       onClick={onAnswerDelete}
-      width="24px"
-      height="24px"
     />
   </div>
 );

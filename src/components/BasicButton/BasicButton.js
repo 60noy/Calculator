@@ -2,27 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BasicButton.css';
 
-const BasicButton = ({ type, onClick, label }) =>
-{
+const BasicButton = ({ type, onClick, label }) => {
   let className;
-  if (type === 'numerial')
-{
+  if (type === 'numerial') {
     className = styles.numerial;
   }
-  else if (type === 'expression')
-{
+  else if (type === 'expression') {
     className = styles.expression;
   }
-  else if (type === 'clear')
-{
+  else if (type === 'clear') {
     className = styles.clear;
   }
-  else if (type === 'calculate')
-{
+  else if (type === 'calculate') {
     className = styles.calculate;
   }
-  else
-{
+  else {
     className = styles.normal;
   }
   return (
