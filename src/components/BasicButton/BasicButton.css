@@ -10,11 +10,7 @@
   cursor: pointer !important;
   transition: .5s;
 }
-@media (max-width: 1200px) {
-  .normal{
-    font-size: 1.5vw;
-  }
-}
+
 
 /*numberial button styles*/
 .numerial{
@@ -49,4 +45,30 @@
 }
 .calculate:hover{
   background-color: #035586;
+}
+
+@media (max-width: 1400px) {
+  .normal{
+    font-size: 1.5vw;
+  }
+}
+@media (max-width: 1000px) {
+  .normal{
+    font-size: 1.8vw;
+  }
+}
+@media (max-width: 840px) {
+  .normal{
+    font-size: 2.4vw;
+  }
+}
+@media (max-width: 740px) {
+  .normal{
+    font-size: 3vw;
+  }
+}
+@media (max-width: 400px) {
+  .normal{
+    font-size: 4vw;
+  }
 }
