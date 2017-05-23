@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import ButtonsContainer from '../ButtonsContainer/ButtonsContainer';
-import Display from '../Display/Display';
-import styles from './Calculator.css';
+import ButtonsContainer from '../ButtonsContainer';
+import Display from '../Display';
+import styles from './styles.css';
 
 class Calculator extends React.Component {
   constructor(props) {

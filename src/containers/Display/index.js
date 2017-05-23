@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Display.css';
+import styles from './styles.css';
 import deleteIcon from '../../../public/images/ic_clear.svg';
 
 const Display = ({ exercise, answer, onCleanButton }) => (
@@ -18,13 +18,12 @@ const Display = ({ exercise, answer, onCleanButton }) => (
       src={deleteIcon}
       className={exercise !== 0 ? styles.icon : styles.iconHidden}
       alt="delete icon"
-      onClick={() => onCleanButton()}
+      onClick={onCleanButton}
     />)}
   </div>
 );
 
 export default Display;
-
 Display.propTypes = {
   answer: PropTypes.string.isRequired,
   onCleanButton: PropTypes.func.isRequired,

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AnswersList from '../../components/AnswersList/AnswersList';
+import AnswersList from '../../components/AnswersList';
 
 const AnswersListContainer = ({ data, onAnswerDelete }) => (
   <div>

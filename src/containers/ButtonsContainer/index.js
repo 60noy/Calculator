@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BasicButton from '../../components/BasicButton/BasicButton';
+import BasicButton from '../../components/BasicButton';
 
 const ButtonsContainer = ({ onNumerialButtonClick, onSignButtonClick, onCalculateButtonClick }) => (
   <div>
@@ -31,9 +31,9 @@ const ButtonsContainer = ({ onNumerialButtonClick, onSignButtonClick, onCalculat
   </div>
 );
 
-export default ButtonsContainer;
 ButtonsContainer.propTypes = {
   onNumerialButtonClick: PropTypes.func.isRequired,
   onCalculateButtonClick: PropTypes.func.isRequired,
   onSignButtonClick: PropTypes.func.isRequired,
 };
+export default ButtonsContainer;

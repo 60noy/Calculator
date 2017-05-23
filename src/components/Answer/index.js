@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Answer.css';
+import styles from './styles.css';
 import icDelete from '../../../public/images/ic_delete_red.png';
 
 const Answer = ({ exercise, onAnswerDelete, answer }) => (

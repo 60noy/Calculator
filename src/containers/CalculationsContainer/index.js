@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './CalculationsContainer.css';
-import Calculator from '../Calculator/Calculator';
-import AnswersListContainer from '../AnswersListContainer/AnswersListContainer';
+import styles from './styles.css';
+import Calculator from '../Calculator';
+import AnswersListContainer from '../AnswersListContainer';
 
 class CalculatorContainer extends Component {
   constructor(props) {
