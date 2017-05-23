@@ -10,7 +10,6 @@ const Answer = ({ exercise, onAnswerDelete, answer }) => (
       <span className={styles.answer}>
         {` ${answer}`}
       </span>
-
     </div>
     <img
       src={icDelete}

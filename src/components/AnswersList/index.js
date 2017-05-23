@@ -2,17 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Answer from '../Answer';
 
+let counter = 0;
 const AnswersList = ({ data, onAnswerDelete }) => (
   <div>
-    {data.map(calculation => (
-      <Answer
+    {data.map((calculation) => {
+      counter += 1;
+      return (<Answer
         exercise={calculation.exercise}
-        key={calculation.id}
+        key={counter}
         answer={calculation.answer}
         onAnswerDelete={() => onAnswerDelete(calculation.id)}
-      />),
-    )
-}
+      />);
+    },
+)}
   </div>
 );
 

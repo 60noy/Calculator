@@ -44,7 +44,7 @@
   "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "react/forbid-prop-types": [0, { "forbid": ['array'] }],
-      "no-unused-vars": ["error", { "args": "all" }],
+      # "no-unused-vars": ["error", { "args": "all" }],
       "no-eval": [0, {"allowIndirect": true}] ,
       "linebreak-style": 0,
       "brace-style": [1, "stroustrup", { "allowSingleLine": true }],
