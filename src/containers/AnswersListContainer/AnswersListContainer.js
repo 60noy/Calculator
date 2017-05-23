@@ -10,9 +10,9 @@ const AnswersListContainer = ({ data, onAnswerDelete }) => (
     />
   </div>
   );
-export default AnswersListContainer;
 
 AnswersListContainer.propTypes = {
   data: PropTypes.array.isRequired,
   onAnswerDelete: PropTypes.func.isRequired,
 };
+export default AnswersListContainer;

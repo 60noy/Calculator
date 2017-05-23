@@ -1,32 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import styles from './CalculationsContainer.css';
 import Calculator from '../Calculator/Calculator';
-import styles from './Main.css';
-import AnswersListContainer from '../../containers/AnswersListContainer/AnswersListContainer';
+import AnswersListContainer from '../AnswersListContainer/AnswersListContainer';
 
-export default class Main extends React.Component {
+class CalculatorContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       calculations: [],
     };
   }
+  // adds the calculation to calculations array in state
   handleCalculationAdded = (calculation) => {
-    const calculations = this.state.calculations;
+    const { calculations } = this.state;
     calculations.push(calculation);
     this.setState({ calculations });
   }
-  // deletes the answer on bin icon click
+    // deletes the answer on bin icon click
   handleAnswerDelete = (answerObjID) => {
-    let calculations = this.state.calculations;
+    let { calculations } = this.state;
     calculations = calculations.filter(answer => answer.id !== answerObjID);
     this.setState({ calculations });
   }
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.title}>
-          JavaScript Calculator
-        </div>
         <Calculator
           onNewCalculation={this.handleCalculationAdded}
         />
@@ -39,7 +37,6 @@ export default class Main extends React.Component {
       </div>
     );
   }
-}
+  }
 
-Main.propTypes = {
-};
+export default CalculatorContainer;

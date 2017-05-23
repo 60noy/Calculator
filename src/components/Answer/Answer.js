@@ -21,10 +21,9 @@ const Answer = ({ exercise, onAnswerDelete, answer }) => (
   </div>
 );
 
-export default Answer;
-
 Answer.propTypes = {
   exercise: PropTypes.string.isRequired,
   onAnswerDelete: PropTypes.func.isRequired,
   answer: PropTypes.string.isRequired,
 };
+export default Answer;

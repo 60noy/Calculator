@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BasicButton from '../BasicButton/BasicButton';
+import BasicButton from '../../components/BasicButton/BasicButton';
 
 const ButtonsContainer = ({ onNumerialButtonClick, onSignButtonClick, onCalculateButtonClick }) => (
   <div>
