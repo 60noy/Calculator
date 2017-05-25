@@ -14,13 +14,13 @@ const ButtonsContainer = ({ onNumerialButtonClick, onSignButtonClick, onCalculat
       <BasicButton label="4" type="numerial" onClick={() => onNumerialButtonClick(4)} />
       <BasicButton label="5" type="numerial" onClick={() => onNumerialButtonClick(5)} />
       <BasicButton label="6" type="numerial" onClick={() => onNumerialButtonClick(6)} />
-      <BasicButton label="%" type="expression" onClick={() => onSignButtonClick('/')} />
+      <BasicButton label="&divide;" type="expression" onClick={() => onSignButtonClick('/')} />
     </div>
     <div>
       <BasicButton label="1" type="numerial" onClick={() => onNumerialButtonClick(1)} />
       <BasicButton label="2" type="numerial" onClick={() => onNumerialButtonClick(2)} />
       <BasicButton label="3" type="numerial" onClick={() => onNumerialButtonClick(3)} />
-      <BasicButton label="*" type="expression" onClick={() => onSignButtonClick('*')} />
+      <BasicButton label="&times;" type="expression" onClick={() => onSignButtonClick('*')} />
     </div>
     <div>
       <BasicButton label="." type="numerial" onClick={() => onNumerialButtonClick('.')} />
